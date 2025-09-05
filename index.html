@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List - Mini Project Vimo</title>
+    
+    <!-- CSS External  -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS Tailwind 
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+
 </head>
 <body>
+<div>
+
     <!-- Header Section  -->
     <header>
         <h1>To-Do List</h1>
@@ -14,21 +22,55 @@
     
     <!-- Main Section  -->
     <main>
+
+        <!-- To-Do Input Section  -->
+        <input_section>
+            <input type="text" id="to_do_activity" placeholder="Add a to-do..">
+            <input type="date" id="to_do_when" placeholder="Select a date..">
+            <button type="button" id="button_add" onclick="validasi();"> + </button>
+        </input_section>
         
+        <change_section>
+            <button type="button" id="button_filter">FILTER</button>
+            <select id="statusFilter" style="display:none; margin-left:8px;">
+                <option value="all">(No Filter)</option>
+                <option value="complete">Complete</option>
+                <option value="notyet">Not Yet</option>
+            </select>
+            <button type="button" id="button_reset" onclick="resettodo()">RESET</button>
+        </change_section>
+        
+        <!-- To-Do List Section  -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Action</th>
+                    <th>Activity</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="to_do_list">
+
+            </tbody>
+        </table>
+        
+        <!-- <section>
+            <h2>To-Do List</h2>
+            <ul id="to_do_list">
+                <p>No tasks added yet.</p>
+            </ul>
+        </section> -->
+
     </main>
     
     <!-- Footer Section  -->
     <footer>
-        <p>&copy; Vimo 2025</p>
+        <p>&copy; Vimo's To-Do List 2025</p>
     </footer>
-
-    <!-- <div id="kotak">
-        <div id="aplikasi">
-            <h1 style="color: #F6F4EB";>To-Do List</h1>
-        </div>
-    </div> -->
-
+    
     <!-- Javascript External -->
-     <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
+</div>
 </body>
 </html>
